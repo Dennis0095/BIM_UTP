@@ -23,6 +23,7 @@ public class ParametroViewModel extends ViewModel implements IParametro {
         parametroRepository = new ParametroRepository();
     }
     // comentario
+    // comentario OScar
 
     @Override
     public void getEntidadesFinancieras() {
