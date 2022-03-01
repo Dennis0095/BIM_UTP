@@ -24,6 +24,7 @@ public class ParametroViewModel extends ViewModel implements IParametro {
     }
     // comentario
     // comentario OScar
+    // comentario Piere
 
     @Override
     public void getEntidadesFinancieras() {
