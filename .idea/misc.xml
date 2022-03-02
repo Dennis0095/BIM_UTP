@@ -3,13 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/app_bar_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/drawable/background.xml" value="0.3205" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/drawable/ic_backgroundfinal.xml" value="0.3205" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.3205" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/drawable/side_nav_bar.xml" value="0.2965" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_main.xml" value="0.24444444444444444" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register.xml" value="0.3592592592592593" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step1.xml" value="0.25" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step3.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step4.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/app_bar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/app_bar_main.xml" value="0.24444444444444444" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/fragment_second.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

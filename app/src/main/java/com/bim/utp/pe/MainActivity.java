@@ -1,18 +1,21 @@
 package com.bim.utp.pe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.bim.utp.pe.local.model.BaseResponse;
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
+import com.bim.utp.pe.local.model.body.OperadorMovil;
+import com.bim.utp.pe.mvvm.view.registro.RegisterActivity;
+import com.bim.utp.pe.mvvm.view.registro.RegisterActivity2;
 import com.bim.utp.pe.mvvm.viewmodel.parametro.ParametroViewModel;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
@@ -25,12 +28,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bim.utp.pe.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +43,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
+        binding.appBarMain.botonseguir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+              Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+              startActivity(intent);
             }
         });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -57,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        getEntidades();
+        //getEntidades();
+        //get0peradores();
     }
 
     public void getEntidades(){
@@ -69,6 +75,30 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(ArrayList<EntidadFinanciera> entidadFinancieras) {
                 for(EntidadFinanciera entidad: entidadFinancieras){
                     Log.d("DMA_LECTOR", " entidad = " + entidad.getDescripcion());
+
+                    Spinner spinnere = findViewById(R.id.spinnerEntidades);
+
+                    List<String> list = new ArrayList<>();
+                    list.add(entidad.getDescripcion());
+
+                    ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_item, list);
+                    dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinnere.setAdapter(dataAdapter);
+                }
+            }
+        });
+        viewModel.setError().observe(this, baseResponse -> Toast.makeText(MainActivity.this, baseResponse.getMessage(), Toast.LENGTH_LONG).show());
+    }
+
+    public void get0peradores(){
+        final ParametroViewModel viewModel = ViewModelProviders.of(this).get(ParametroViewModel.class);
+        viewModel.getOperadoresMoviles();
+        viewModel.setListenerOperadoresMoviles().observe(this, baseResponse -> viewModel.verifyResponse2(baseResponse));
+        viewModel.setOperadorMovil().observe(this, new Observer<ArrayList<OperadorMovil>>() {
+            @Override
+            public void onChanged(ArrayList<OperadorMovil> operadoresMoviles) {
+                for(OperadorMovil operador: operadoresMoviles){
+                    Log.d("DMA_LECTOR", " operador = " + operador.getDescripcion());
                 }
             }
         });
