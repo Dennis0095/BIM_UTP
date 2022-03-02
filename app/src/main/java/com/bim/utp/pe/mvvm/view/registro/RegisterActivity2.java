@@ -41,13 +41,15 @@ public class RegisterActivity2 extends AppCompatActivity {
             }
         });
         getEntidades();
-        get0peradores();
     }
 
     public void getEntidades(){
         Spinner spinnere = findViewById(R.id.spinnerEntidades);
         viewModel.getEntidadesFinancieras();
-        viewModel.setListenerEntidadesFinancieras().observe(this, baseResponse -> viewModel.verifyResponse(baseResponse));
+        viewModel.setListenerEntidadesFinancieras().observe(this, baseResponse ->{
+            viewModel.verifyResponse(baseResponse);
+            get0peradores();
+        } );
         viewModel.setEntidadFinanciera().observe(this, new Observer<ArrayList<EntidadFinanciera>>() {
             @Override
             public void onChanged(ArrayList<EntidadFinanciera> entidadFinancieras) {
