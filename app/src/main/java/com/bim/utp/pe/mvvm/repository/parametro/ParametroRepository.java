@@ -21,6 +21,8 @@ public class ParametroRepository implements IParametro {
 
     private BaseResponse baseResponse;
 
+//HOLA
+
     @Override
     public void getEntidadesFinancieras() {
         baseResponse = new BaseResponse();
