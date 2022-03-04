@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,11 +15,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.ui.AppBarConfiguration;
 
-import com.bim.utp.pe.MainActivity;
 import com.bim.utp.pe.R;
-import com.bim.utp.pe.databinding.ActivityMainBinding;
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
 import com.bim.utp.pe.local.model.body.OperadorMovil;
 import com.bim.utp.pe.mvvm.viewmodel.parametro.ParametroViewModel;
@@ -26,6 +24,8 @@ import com.bim.utp.pe.preferences.UsuarioPreferences;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class RegisterActivity2 extends AppCompatActivity {
     ParametroViewModel viewModel;
@@ -36,6 +36,8 @@ public class RegisterActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_step2);
         Button boton = findViewById(R.id.boton2);
+        ImageView imagenretroceso = findViewById(R.id.retroceso1);
+
         viewModel = ViewModelProviders.of(this).get(ParametroViewModel.class);
         TextView txtDNI = (TextView) findViewById(R.id.dniUsuario);
         TextView txtCodDNI = (TextView) findViewById(R.id.codDNIUsuario);
@@ -45,15 +47,48 @@ public class RegisterActivity2 extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                usuarioPreferences.guardarDNIUsuario(RegisterActivity2.this,txtDNI.getText().toString());
-                usuarioPreferences.guardarcodDNIUsuario(RegisterActivity2.this,txtCodDNI.getText().toString());
-                usuarioPreferences.guardarOperadorUsuario(RegisterActivity2.this,spinnerOperador.getSelectedItemPosition()+1);
-                usuarioPreferences.guardarEntidadUsuario(RegisterActivity2.this,spinnerEntidad.getSelectedItemPosition()+1);
-                Intent intent = new Intent(RegisterActivity2.this,RegisterActivity3.class);
-                startActivity(intent);
+                if(txtDNI.getText().toString().length()== 0 || txtCodDNI.getText().toString().length()==0){
+                    new SweetAlertDialog(RegisterActivity2.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Complete los campos requeridos")
+                            .setConfirmText("Ok")
+                            .showCancelButton(true)
+                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sDialog) {
+                                    sDialog.cancel();
+                                }
+                            })
+                            .show();
+                }else if ( txtDNI.getText().toString().length()!=8){
+                        new SweetAlertDialog(RegisterActivity2.this, SweetAlertDialog.WARNING_TYPE)
+                                .setTitleText("Ingrese un DNI correcto")
+                                .setConfirmText("Ok")
+                                .showCancelButton(true)
+                                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                    @Override
+                                    public void onClick(SweetAlertDialog sDialog) {
+                                        sDialog.cancel();
+                                    }
+                                })
+                                .show();
+                }else{
+                    usuarioPreferences.guardarDNIUsuario(RegisterActivity2.this,txtDNI.getText().toString());
+                    usuarioPreferences.guardarcodDNIUsuario(RegisterActivity2.this,txtCodDNI.getText().toString());
+                    usuarioPreferences.guardarOperadorUsuario(RegisterActivity2.this,spinnerOperador.getSelectedItemPosition()+1);
+                    usuarioPreferences.guardarEntidadUsuario(RegisterActivity2.this,spinnerEntidad.getSelectedItemPosition()+1);
+                    Intent intent = new Intent(RegisterActivity2.this,RegisterActivity3.class);
+                    startActivity(intent);
+                }
             }
         });
         getEntidades();
+        imagenretroceso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity2.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void getEntidades(){

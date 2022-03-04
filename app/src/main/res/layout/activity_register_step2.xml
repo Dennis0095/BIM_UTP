@@ -20,6 +20,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
+            android:id="@+id/retroceso1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -80,46 +81,6 @@
                 android:orientation="vertical"
                 app:layout_constraintVertical_bias="0.0">
 
-                <!--<TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Registrate si eres mayor de 18 años"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Celular: "
-                        android:textAlignment="center"
-                        android:textColor="@color/purple_500"
-                        android:textSize="16sp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="980525970"
-                        android:textAlignment="center"
-                        android:textSize="16sp"
-                        android:textStyle="bold">
-
-                    </TextView>
-                </LinearLayout>-->
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -168,10 +129,10 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/ic_rectangle"
                     android:hint="DNI"
-                    android:paddingStart="10dp"
                     android:inputType="number"
                     android:maxLength="8"
                     android:minHeight="48dp"
+                    android:paddingStart="10dp"
                     android:textAlignment="textStart"
                     android:textStyle="bold">
 
@@ -191,10 +152,10 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_rectangle"
                         android:hint="0"
-                        android:maxLength="1"
-                        android:paddingStart="10dp"
                         android:inputType="number"
+                        android:maxLength="1"
                         android:minHeight="48dp"
+                        android:paddingStart="10dp"
                         android:textAlignment="textStart"
                         android:textStyle="bold">
 

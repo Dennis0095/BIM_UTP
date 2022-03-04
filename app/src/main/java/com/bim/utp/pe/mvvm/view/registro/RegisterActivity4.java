@@ -18,11 +18,9 @@ import retrofit2.Response;
 
 public class RegisterActivity4 extends AppCompatActivity {
 
-    private LinearLayout boton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_step4);
-        boton = findViewById(R.id.boton1);
     }
 }

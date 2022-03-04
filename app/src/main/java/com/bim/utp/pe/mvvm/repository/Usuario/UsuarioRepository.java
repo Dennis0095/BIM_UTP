@@ -27,14 +27,6 @@ public class UsuarioRepository implements IUsuario{
     public void insertarUsuario(Usuario usuario) {
         baseResponse = new BaseResponse();
         usuarioRegistro = new MutableLiveData<>();
-        Log.d("LECTOR:", "MOVIL=" + usuario.getIn_movil());
-        Log.d("LECTOR:", "DNI=" + usuario.getIn_dni());
-        Log.d("LECTOR:", "CODIGO=" + usuario.getIn_codigo());
-        Log.d("LECTOR:", "MONTO=" + usuario.getIn_monto());
-        Log.d("LECTOR:", "CONTRASENIA=" + usuario.getIn_contrasenia());
-        Log.d("LECTOR:", "TIPOUSUARIO=" + usuario.getIn_tipoUsuario_idTipoUsuario());
-        Log.d("LECTOR:", "OPERADOR=" + usuario.getIn_operadorMovil_idOperador());
-        Log.d("LECTOR:", "ENTIDAD=" + usuario.getIn_entidadFinanciera());
 
         Call<ResponseService<ArrayList<ResponseRegistroUsuario>>> call = Util.services.Usuarioregister2(usuario.getIn_movil(), usuario.getIn_contrasenia(), usuario.getIn_dni(), usuario.getIn_codigo(),
                 usuario.getIn_monto(), String.valueOf(usuario.getIn_operadorMovil_idOperador()), String.valueOf(usuario.getIn_tipoUsuario_idTipoUsuario()), String.valueOf(usuario.getIn_entidadFinanciera()));
