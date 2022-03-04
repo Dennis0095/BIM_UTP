@@ -74,7 +74,7 @@
                 android:inputType="phone"
                 android:maxLength="9"
                 android:minHeight="48dp"
-                android:outlineAmbientShadowColor="@color/purple_700"
+                android:outlineAmbientShadowColor="@color/colorPrimary"
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"

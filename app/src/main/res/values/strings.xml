@@ -7,7 +7,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Mi Bim</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_register1">RegisterActivity1</string>
@@ -19,4 +19,19 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="reporteSentinel">Reporte Sentinel</string>
+    <string name="mandaPlata">Manda Plata</string>
+    <string name="recargaUnCe">Recarga un celular</string>
+    <string name="pagaYanbal">Paga Yanbal</string>
+    <string name="pagaServicios">Paga Servicios</string>
+    <string name="sacaPlata">Saca Plata</string>
+    <string name="pagaCompra">Paga tu Compra</string>
+    <string name="pagaSunat">Paga Sunat-RUS</string>
+    <string name="promociones">Promociones</string>
+    <string name="contactanos">Contáctanos</string>
+    <string name="perfil">Mi Perfil Bim</string>
+    <string name="cerrarSesion">Cerrar Sesión</string>
+
+    <string name="ultMovi">Últimos movimientos</string>
 </resources>
