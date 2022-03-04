@@ -17,11 +17,11 @@ import java.util.ArrayList;
 import retrofit2.Response;
 
 public class UsuarioViewModel extends ViewModel implements IUsuario {
-    private MutableLiveData<ResponseRegistroUsuario> listenerUsuarioRegistro;
+    private MutableLiveData<BaseResponse> listenerUsuarioRegistro;
     private MutableLiveData<ArrayList<ResponseRegistroUsuario>> usuarioregistro;
 
     private UsuarioRepository usuarioRepository;
-    private MutableLiveData<ResponseRegistroUsuario> error;
+    private MutableLiveData<BaseResponse> error;
 
     public UsuarioViewModel() {
         error = new MutableLiveData<>();
@@ -37,11 +37,11 @@ public class UsuarioViewModel extends ViewModel implements IUsuario {
     }
 
     @Override
-    public MutableLiveData<ResponseRegistroUsuario> setListenerUsuarioRegistro() {
+    public MutableLiveData<BaseResponse> setListenerUsuarioRegistro() {
         return listenerUsuarioRegistro;
     }
 
-    public void verifyResponse(ResponseRegistroUsuario response){
+    public void verifyResponse(BaseResponse response){
         if(response.getEstado().equals(Constants.CODE_SUCCESSFULL)){
             usuarioregistro.postValue((ArrayList<ResponseRegistroUsuario>) ((ResponseService) response.getData()).Response);
         }else{
@@ -49,7 +49,7 @@ public class UsuarioViewModel extends ViewModel implements IUsuario {
         }
     }
 
-    public MutableLiveData<ResponseRegistroUsuario> setError(){
+    public MutableLiveData<BaseResponse> setError(){
         return error;
     }
 

@@ -1,11 +1,13 @@
 package com.bim.utp.pe.local.model.body;
 
 
-public class ResponseRegistroUsuario <T> {
+import com.google.gson.annotations.SerializedName;
 
+public class ResponseRegistroUsuario{
 
+    @SerializedName("estado")
     private String estado;
-    private T data;
+    @SerializedName("mensaje")
     private String mensaje;
 
     public String getEstado() {
@@ -14,14 +16,6 @@ public class ResponseRegistroUsuario <T> {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
     }
 
     public String getMensaje() {

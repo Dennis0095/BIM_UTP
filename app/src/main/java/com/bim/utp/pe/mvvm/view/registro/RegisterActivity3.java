@@ -93,7 +93,7 @@ public class RegisterActivity3 extends AppCompatActivity {
                 }
             }
         });
-        viewModel.setError().observe(this, baseResponse -> Toast.makeText(RegisterActivity3.this, baseResponse.getMensaje(), Toast.LENGTH_SHORT).show());
+        viewModel.setError().observe(this, baseResponse -> Toast.makeText(RegisterActivity3.this, baseResponse.getMessage(), Toast.LENGTH_SHORT).show());
 }
 
 }

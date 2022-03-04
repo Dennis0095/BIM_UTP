@@ -4,40 +4,29 @@ import com.google.gson.annotations.SerializedName;
 
 public class Usuario {
 
-    @SerializedName("idUsuario")
-    private String idUsuario;
-
     @SerializedName("in_movil")
     private String in_movil;
 
     @SerializedName("in_contrasenia")
     private String in_contrasenia;
 
-    @SerializedName(" in_dni")
-    private String  in_dni;
+    @SerializedName("in_dni")
+    private String in_dni;
 
-    @SerializedName(" in_codigo")
-    private String  in_codigo;
+    @SerializedName("in_codigo")
+    private String in_codigo;
 
-    @SerializedName(" in_monto")
-    private String  in_monto;
+    @SerializedName("in_monto")
+    private String in_monto;
 
-    @SerializedName(" in_operadorMovil_idOperador")
-    private int  in_operadorMovil_idOperador;
+    @SerializedName("in_operadorMovil_idOperador")
+    private int in_operadorMovil_idOperador;
 
-    @SerializedName(" in_tipoUsuario_idTipoUsuario")
-    private int   in_tipoUsuario_idTipoUsuario;
+    @SerializedName("in_tipoUsuario_idTipoUsuario")
+    private int in_tipoUsuario_idTipoUsuario;
 
-    @SerializedName(" in_entidadFinanciera")
-    private int   in_entidadFinanciera;
-
-    public String getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
-    }
+    @SerializedName("in_entidadFinanciera")
+    private int in_entidadFinanciera;
 
     public String getIn_movil() {
         return in_movil;
