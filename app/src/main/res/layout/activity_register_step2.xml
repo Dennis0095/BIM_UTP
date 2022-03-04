@@ -191,6 +191,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_rectangle"
                         android:hint="0"
+                        android:maxLength="1"
                         android:paddingStart="10dp"
                         android:inputType="number"
                         android:minHeight="48dp"

@@ -5,10 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class Usuario {
 
     @SerializedName("idUsuario")
-    private String idOperador;
-
-    @SerializedName("descripcion")
-    private String descripcion;
+    private String idUsuario;
 
     @SerializedName("in_movil")
     private String in_movil;
@@ -34,20 +31,12 @@ public class Usuario {
     @SerializedName(" in_entidadFinanciera")
     private int   in_entidadFinanciera;
 
-    public String getIdOperador() {
-        return idOperador;
+    public String getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setIdOperador(String idOperador) {
-        this.idOperador = idOperador;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getIn_movil() {

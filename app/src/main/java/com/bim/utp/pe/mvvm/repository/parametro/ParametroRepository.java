@@ -80,7 +80,7 @@ public class ParametroRepository implements IParametro {
             @Override
             public void onFailure(Call<ResponseService<ArrayList<OperadorMovil>>> call, Throwable t) {
                 baseResponse.setEstado(Constants.CODE_ERROR_SERVER);
-                baseResponse.setMessage(Constants.ERROR_COMUNICACION + Constants.ERROR_LISTAR_ENTIDADES);
+                baseResponse.setMessage(Constants.ERROR_COMUNICACION);
                 operadorMovil.postValue(baseResponse);
             }
         });

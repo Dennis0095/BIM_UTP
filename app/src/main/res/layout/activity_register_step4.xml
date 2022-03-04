@@ -74,11 +74,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="10dp"
+                android:padding="20dp"
                 android:text="Se ha registrado exitosamente, puede ingresar"
                 android:textAlignment="center"
                 android:textColor="#564AA0"
-                android:textSize="14sp">
+                android:textSize="17sp">
             </TextView>
 
 
@@ -102,6 +102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:textSize="20dp"
                         android:text="Continuar"
                         android:textAlignment="center"
                         android:textColor="@color/white">

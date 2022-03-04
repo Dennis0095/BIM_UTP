@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 import com.bim.utp.pe.BuildConfig;
 import com.bim.utp.pe.local.model.BaseResponse;
+import com.bim.utp.pe.local.model.body.ResponseRegistroUsuario;
 import com.bim.utp.pe.mvvm.repository.services.Services;
 import com.google.gson.Gson;
 
@@ -126,6 +127,19 @@ public class Util {
         }
         baseResponse.setEstado(Constants.CODE_ERROR_PROCESAR);
         baseResponse.setMessage(Constants.ERROR_PROCESAR_CONSULTA);
+
+        return baseResponse;
+    }
+
+    public static ResponseRegistroUsuario parsearError2(ResponseBody error, ResponseRegistroUsuario baseResponse, String codeError){
+
+        try {
+            error.string();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        baseResponse.setEstado(Constants.CODE_ERROR_PROCESAR);
+        baseResponse.setMensaje(Constants.ERROR_PROCESAR_CONSULTA);
 
         return baseResponse;
     }

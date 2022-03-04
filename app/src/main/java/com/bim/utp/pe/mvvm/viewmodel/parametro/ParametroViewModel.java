@@ -27,8 +27,7 @@ public class ParametroViewModel extends ViewModel implements IParametro {
         error = new MutableLiveData<>();
         parametroRepository = new ParametroRepository();
     }
-    // comentario
-    // comentario OScar
+
 
     @Override
     public void getEntidadesFinancieras() {
@@ -48,7 +47,6 @@ public class ParametroViewModel extends ViewModel implements IParametro {
         parametroRepository.getOperadoresMoviles();
         listenerOperador = parametroRepository.setListenerOperadoresMoviles();
     }
-
 
     @Override
     public MutableLiveData<BaseResponse> setListenerOperadoresMoviles() {

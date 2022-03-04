@@ -57,16 +57,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="10dp"
+                android:padding="20dp"
                 android:text="Empieza a usar Bim"
                 android:textColor="#564AA0"
-                android:textSize="14sp">
+                android:textSize="20sp">
 
             </TextView>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/numeroUsuario"
-                android:layout_width="150dp"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#564AA0"
@@ -78,7 +78,7 @@
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="12sp">
+                android:textSize="14sp">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -103,6 +103,7 @@
                         android:layout_height="wrap_content"
                         android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
                         android:padding="10dp"
+                        android:textSize="20dp"
                         android:text="Continuar"
                         android:textAlignment="center"
                         android:textColor="@color/white">
