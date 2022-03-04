@@ -123,7 +123,7 @@ public class RegisterActivity3 extends AppCompatActivity {
                 if(Integer.parseInt(list.get(0))==1){
                     Intent intent = new Intent(RegisterActivity3.this,RegisterActivity4.class);
                     startActivity(intent);
-                    //usuarioPreferences.limpiardatosUsuario(RegisterActivity3.this);
+                    usuarioPreferences.limpiardatosUsuario(RegisterActivity3.this);
                 }else{
                     new SweetAlertDialog(RegisterActivity3.this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText(list.get(1))

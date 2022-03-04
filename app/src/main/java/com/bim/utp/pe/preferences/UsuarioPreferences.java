@@ -23,7 +23,7 @@ public class UsuarioPreferences{
 
     public String recuperarMovilUsuario(Context c) {
         SharedPreferences datosUsuario = c.getSharedPreferences(preferenceDatosUsuario, Context.MODE_PRIVATE);
-        return datosUsuario.getString("movilUsuario", "no hay dato");
+        return datosUsuario.getString("movilUsuario", "");
     }
 
 
