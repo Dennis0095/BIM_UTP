@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 import com.bim.utp.pe.local.model.BaseResponse;
 import com.bim.utp.pe.local.model.ResponseService;
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
+import com.bim.utp.pe.local.model.body.EntidadDeposito;
 import com.bim.utp.pe.mvvm.repository.parametro.IParametro;
 import com.bim.utp.pe.mvvm.repository.parametro.ParametroRepository;
 import com.bim.utp.pe.util.Constants;
@@ -15,6 +16,10 @@ import java.util.ArrayList;
 public class ParametroViewModel extends ViewModel implements IParametro {
     private MutableLiveData<BaseResponse> listenerEntidad;
     private MutableLiveData<ArrayList<EntidadFinanciera>> entidadesFinancieras;
+
+    private MutableLiveData<BaseResponse> listenerDeposito;
+    private MutableLiveData<ArrayList<EntidadDeposito>> reporteDepositos;
+
     private ParametroRepository parametroRepository;
     private MutableLiveData<BaseResponse> error;
 
@@ -26,6 +31,7 @@ public class ParametroViewModel extends ViewModel implements IParametro {
     // comentario OScar
     // comentario Piere
 
+    //ENTIDADES FINANCIERAS
     @Override
     public void getEntidadesFinancieras() {
         entidadesFinancieras = new MutableLiveData<>();
@@ -46,6 +52,32 @@ public class ParametroViewModel extends ViewModel implements IParametro {
         }
     }
 
+
+    //REPORTE DEPOSITO
+    @Override
+    public void getReporteDepositos(int in_idUsuario) {
+        reporteDepositos = new MutableLiveData<>();
+        parametroRepository.getReporteDepositos(in_idUsuario);
+        listenerDeposito = parametroRepository.setListenerReporteDepositos(in_idUsuario);
+    }
+
+    @Override
+    public MutableLiveData<BaseResponse> setListenerReporteDepositos(int in_idUsuario) {
+        return listenerDeposito;
+    }
+
+    public void verifyResponse2(BaseResponse response){
+        if(response.getEstado().equals(Constants.CODE_SUCCESSFULL)){
+            reporteDepositos.postValue((ArrayList<EntidadDeposito>) ((ResponseService) response.getData()).Response);
+        }else{
+            error.postValue(response);
+        }
+    }
+
+
+
+
+
     public MutableLiveData<BaseResponse> setError(){
         return error;
     }
@@ -53,4 +85,12 @@ public class ParametroViewModel extends ViewModel implements IParametro {
     public MutableLiveData<ArrayList<EntidadFinanciera>> setEntidadFinanciera(){
         return entidadesFinancieras;
     }
+
+    public MutableLiveData<ArrayList<EntidadDeposito>> setReporteDeposito(){
+        return reporteDepositos;
+    }
+
+
+
+
 }

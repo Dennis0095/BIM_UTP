@@ -13,4 +13,9 @@ public interface IParametro {
 
     MutableLiveData<BaseResponse> setListenerEntidadesFinancieras();
 
+
+    void getReporteDepositos(int in_idUsuario);
+
+    MutableLiveData<BaseResponse> setListenerReporteDepositos(int in_idUsuario);
+
 }

@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.bim.utp.pe.local.model.BaseResponse;
+import com.bim.utp.pe.local.model.body.EntidadDeposito;
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
 import com.bim.utp.pe.mvvm.viewmodel.parametro.ParametroViewModel;
 import com.google.android.material.snackbar.Snackbar;
@@ -57,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        getEntidades();
+        //getEntidades();
+        //getDepositos(int in_idUsuario);
     }
 
     public void getEntidades(){
@@ -69,6 +71,25 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(ArrayList<EntidadFinanciera> entidadFinancieras) {
                 for(EntidadFinanciera entidad: entidadFinancieras){
                     Log.d("DMA_LECTOR", " entidad = " + entidad.getDescripcion());
+                }
+            }
+        });
+        viewModel.setError().observe(this, baseResponse -> Toast.makeText(MainActivity.this, baseResponse.getMessage(), Toast.LENGTH_LONG).show());
+    }
+
+
+
+    public void getDepositos(int in_idUsuario){
+        final ParametroViewModel viewModel = ViewModelProviders.of(this).get(ParametroViewModel.class);
+        viewModel.getReporteDepositos(in_idUsuario);
+        viewModel.setListenerReporteDepositos(in_idUsuario).observe(this, baseResponse -> viewModel.verifyResponse(baseResponse));
+        viewModel.setReporteDeposito().observe(this, new Observer<ArrayList<EntidadDeposito>>() {
+            @Override
+            public void onChanged(ArrayList<EntidadDeposito> entidadDepositos) {
+                for(EntidadDeposito entidad: entidadDepositos){
+                    Log.d("DMA_LECTOR", " entidad = " + entidad.getIdDeposito());
+                    Log.d("DMA_LECTOR", " entidad = " + entidad.getMonto());
+                    Log.d("DMA_LECTOR", " entidad = " + entidad.getFecha());
                 }
             }
         });
