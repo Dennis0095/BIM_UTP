@@ -10,4 +10,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="menu_retiro">Saca Plata</string>
+    <string name="menu_reporte">Listado Reporte</string>
 </resources>

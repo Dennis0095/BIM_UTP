@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.bim.utp.pe.local.model.BaseResponse;
@@ -36,17 +37,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Toast.makeText(getApplicationContext(),"Hola este es un toast", Toast.LENGTH_SHORT).show();
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
+        binding.appBarMain.fabb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Este es la accion del boton", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Toast.makeText(getApplicationContext(),"Hola este es un toast", Toast.LENGTH_SHORT).show();
             }
         });
+
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -60,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
         //getEntidades();
         //getDepositos(int in_idUsuario);
+
+
     }
 
     public void getEntidades(){

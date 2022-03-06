@@ -31,7 +31,8 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
-            public void onChanged(@Nullable String s) {
+            public void onChanged(String s) {
+                s = "texto de prueba";
                 textView.setText(s);
             }
         });
