@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#564aa0</color>
-    <color name="colorAcent">#959595</color>
+    <color name="colorAcent">#BAB9B9</color>
     <color name="colorPrimaryDark">#4A3D97</color>
     <color name="colorBtn">#3abfac</color>
     <color name="colorBtn2">#e64682</color>
@@ -16,5 +16,7 @@
     <color name="fondoCirculo">#c4c4c4</color>
     <color name="textoCirculo">#f3f3f3</color>
     <color name="transparente">#00FFFFFF</color>
-    <color name="textcolor">#787878</color>
+    <color name="textcolor">#5A5959</color>
+    <color name="textHintColor">#B4A9A9</color>
+    <color name="colorAcentTranspare">#94DDDDDD</color>
 </resources>
