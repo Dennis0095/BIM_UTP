@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BimUtp">
         <activity
+            android:theme="@style/Theme.BimUtp2"
+            android:name=".mvvm.view.enviarDinero.EnviarDineroActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:name=".mvvm.view.usuario.ReporteDepositoActivity"
             android:exported="true" />
         <activity
@@ -26,6 +31,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".mvvm.view.registro.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/SinToolbar" />
+        <activity
+            android:name=".mvvm.view.registro.RegisterActivity2"
+            android:exported="false"
+            android:theme="@style/SinToolbar" />
+        <activity
+            android:name=".mvvm.view.registro.RegisterActivity3"
+            android:exported="false"
+            android:theme="@style/SinToolbar" />
+        <activity
+            android:name=".mvvm.view.registro.RegisterActivity4"
+            android:exported="false"
+            android:theme="@style/SinToolbar" />
     </application>
 
 </manifest>
