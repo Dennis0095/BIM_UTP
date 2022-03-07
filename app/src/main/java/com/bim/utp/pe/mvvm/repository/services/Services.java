@@ -13,10 +13,10 @@ import retrofit2.http.Path;
 
 public interface Services {
 
-    @POST("entidadFinanciera.php")
+    @GET("https://www.vaqante.com/ws_plancha_virtual/BIM/entidadFinanciera.php")
     Call<ResponseService<ArrayList<EntidadFinanciera>>> getEntidadFinanciera();
 
-    @GET("negocio/listaReporteDeposito.php/{in_idUsuario}")
+    @GET("https://www.vaqante.com/ws_plancha_virtual/BIM/negocio/listaReporteDeposito.php/{in_idUsuario}")
     Call<ResponseService<ArrayList<EntidadDeposito>>> getReporteDeposito(@Path("in_idUsuario") int in_idUsuario);
 
 

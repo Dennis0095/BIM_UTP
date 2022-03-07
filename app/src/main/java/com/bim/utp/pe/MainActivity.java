@@ -4,17 +4,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.Toast;
 
-import com.bim.utp.pe.local.model.BaseResponse;
 import com.bim.utp.pe.local.model.body.EntidadDeposito;
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
 import com.bim.utp.pe.mvvm.viewmodel.parametro.ParametroViewModel;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
@@ -27,11 +29,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bim.utp.pe.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
+    private EditText valorId;
+    private Button generar;
+    private ListView listado;
+
+    private ArrayList<String> mLista = new ArrayList<>();
+
+
+    //EVENTO DEL HOME
+    @Override
+    public void onClick(View v) {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +81,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         //getEntidades();
-        //getDepositos(int in_idUsuario);
+        //getDepositos(16);
 
 
     }
 
+
+    //METODOS DE SERVICIO
     public void getEntidades(){
         final ParametroViewModel viewModel = ViewModelProviders.of(this).get(ParametroViewModel.class);
         viewModel.getEntidadesFinancieras();
@@ -90,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     public void getDepositos(int in_idUsuario){
         final ParametroViewModel viewModel = ViewModelProviders.of(this).get(ParametroViewModel.class);
         viewModel.getReporteDepositos(in_idUsuario);
-        viewModel.setListenerReporteDepositos(in_idUsuario).observe(this, baseResponse -> viewModel.verifyResponse(baseResponse));
+        viewModel.setListenerReporteDepositos().observe(this, baseResponse -> viewModel.verifyResponse(baseResponse));
         viewModel.setReporteDeposito().observe(this, new Observer<ArrayList<EntidadDeposito>>() {
             @Override
             public void onChanged(ArrayList<EntidadDeposito> entidadDepositos) {
@@ -103,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
         });
         viewModel.setError().observe(this, baseResponse -> Toast.makeText(MainActivity.this, baseResponse.getMessage(), Toast.LENGTH_LONG).show());
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,4 +137,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }

@@ -17,6 +17,8 @@ import retrofit2.Response;
 
 public class ParametroRepository implements IParametro {
     private MutableLiveData<BaseResponse> entidad;
+    private MutableLiveData<BaseResponse> deposito;
+
     private BaseResponse baseResponse;
 
     @Override
@@ -61,7 +63,7 @@ public class ParametroRepository implements IParametro {
     @Override
     public void getReporteDepositos(int in_idUsuario) {
         baseResponse = new BaseResponse();
-        entidad = new MutableLiveData<>();
+        deposito = new MutableLiveData<>();
 
         Call<ResponseService<ArrayList<EntidadDeposito>>> call = Util.services.getReporteDeposito(in_idUsuario);
         call.enqueue(new Callback<ResponseService<ArrayList<EntidadDeposito>>>() {
@@ -77,21 +79,21 @@ public class ParametroRepository implements IParametro {
                         baseResponse.setMessage(Constants.ERROR_NO_IDENTIFICADO);
 
                 }
-                entidad.postValue(baseResponse);
+                deposito.postValue(baseResponse);
             }
 
             @Override
             public void onFailure(Call<ResponseService<ArrayList<EntidadDeposito>>> call, Throwable t) {
                 baseResponse.setEstado(Constants.CODE_ERROR_SERVER);
                 baseResponse.setMessage(Constants.ERROR_COMUNICACION + Constants.ERROR_LISTAR_ENTIDADES);
-                entidad.postValue(baseResponse);
+                deposito.postValue(baseResponse);
             }
         });
     }
 
     @Override
-    public MutableLiveData<BaseResponse> setListenerReporteDepositos(int in_idUsuario) {
-        return entidad;
+    public MutableLiveData<BaseResponse> setListenerReporteDepositos() {
+        return deposito;
     }
 
 }

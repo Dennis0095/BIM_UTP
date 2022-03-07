@@ -28,12 +28,13 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
+        //final TextView textView = binding.textHome;
+
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String s) {
-                s = "texto de prueba";
-                textView.setText(s);
+                //s = "texto de prueba";
+                //textView.setText(s);
             }
         });
         return root;

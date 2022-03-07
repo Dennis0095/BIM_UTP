@@ -58,11 +58,11 @@ public class ParametroViewModel extends ViewModel implements IParametro {
     public void getReporteDepositos(int in_idUsuario) {
         reporteDepositos = new MutableLiveData<>();
         parametroRepository.getReporteDepositos(in_idUsuario);
-        listenerDeposito = parametroRepository.setListenerReporteDepositos(in_idUsuario);
+        listenerDeposito = parametroRepository.setListenerReporteDepositos();
     }
 
     @Override
-    public MutableLiveData<BaseResponse> setListenerReporteDepositos(int in_idUsuario) {
+    public MutableLiveData<BaseResponse> setListenerReporteDepositos() {
         return listenerDeposito;
     }
 
