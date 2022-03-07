@@ -11,6 +11,7 @@ public class Constants {
 
 
     public static final String ERROR_LISTAR_ENTIDADES = " No se pudo obtener las entidades financieras.";
+    public static final String ERROR_LISTAR_DEPOSITOS = " No se pudo obtener el reporte de depósitos";
 
 
 }

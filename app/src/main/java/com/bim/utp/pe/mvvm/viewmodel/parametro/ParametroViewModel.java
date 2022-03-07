@@ -22,9 +22,7 @@ public class ParametroViewModel extends ViewModel implements IParametro {
         error = new MutableLiveData<>();
         parametroRepository = new ParametroRepository();
     }
-    // comentario
-    // comentario OScar
-    // comentario Piere
+
 
     @Override
     public void getEntidadesFinancieras() {

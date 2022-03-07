@@ -1,4 +1,4 @@
-package com.bim.utp.pe;
+package com.bim.utp.pe.mvvm.view;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -6,13 +6,12 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
-import com.bim.utp.pe.local.model.BaseResponse;
+import com.bim.utp.pe.R;
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
 import com.bim.utp.pe.mvvm.viewmodel.parametro.ParametroViewModel;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
