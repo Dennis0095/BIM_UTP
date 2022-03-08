@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+// comentairo
+
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
 import com.bim.utp.pe.local.model.body.OperadorMovil;
 import com.bim.utp.pe.mvvm.view.enviarDinero.EnviarDineroActivity;
