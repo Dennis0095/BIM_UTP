@@ -46,6 +46,7 @@ public class AdapterDepositos extends RecyclerView.Adapter<AdapterDepositos.View
         return new ViewHolder(v);
     }
 
+    // comentario
     @Override
     public void onBindViewHolder(final @NonNull ViewHolder v, final int i) {
         if (i%2==0){
