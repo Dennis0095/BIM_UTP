@@ -1,6 +1,7 @@
 package com.bim.utp.pe.mvvm.viewmodel.usuario;
 
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.bim.utp.pe.local.model.BaseResponse;
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
@@ -9,7 +10,7 @@ import com.bim.utp.pe.mvvm.repository.usuario.UsuarioRepository;
 
 import java.util.ArrayList;
 
-public class UsuarioViewModel {
+public class UsuarioViewModel extends ViewModel {
 
     private MutableLiveData<BaseResponse> listenerReporteDeposito;
     private UsuarioRepository repository;

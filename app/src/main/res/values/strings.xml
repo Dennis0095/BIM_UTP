@@ -20,7 +20,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
-    <string name="reporteSentinel">Reporte Sentinel</string>
+    <string name="reporteDepositos">Reporte Depósitos</string>
     <string name="mandaPlata">Manda Plata</string>
     <string name="recargaUnCe">Recarga un celular</string>
     <string name="pagaYanbal">Paga Yanbal</string>

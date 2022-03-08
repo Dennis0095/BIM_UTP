@@ -15,6 +15,7 @@ import retrofit2.http.GET;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface Services {
 
@@ -38,5 +39,5 @@ public interface Services {
 
 
     @GET("negocio/listaReporteDeposito.php/{in_idUsuario}")
-    Call<ResponseService<ArrayList<EntidadDeposito>>> getReporteDeposito(@Path("in_idUsuario") int in_idUsuario);
+    Call<ResponseService<ArrayList<EntidadDeposito>>> getReporteDeposito(@Query("in_idUsuario") int in_idUsuario);
 }

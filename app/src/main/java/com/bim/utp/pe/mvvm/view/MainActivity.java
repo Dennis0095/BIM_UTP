@@ -15,6 +15,7 @@ import com.bim.utp.pe.local.model.body.OperadorMovil;
 import com.bim.utp.pe.mvvm.view.enviarDinero.EnviarDineroActivity;
 import com.bim.utp.pe.mvvm.view.registro.RegisterActivity;
 import com.bim.utp.pe.mvvm.view.registro.RegisterActivity2;
+import com.bim.utp.pe.mvvm.view.usuario.depositos.ReporteDepositoActivity;
 import com.bim.utp.pe.mvvm.viewmodel.parametro.ParametroViewModel;
 import com.google.android.material.navigation.NavigationView;
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.reporteSentinel)
+                R.id.nav_home)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -78,6 +79,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.mandaPlata:
                 Intent inte = new Intent(this , EnviarDineroActivity.class);
                 startActivity(inte);
+                return true;
+                case R.id.reporteDepositos:
+                Intent intent = new Intent(this , ReporteDepositoActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
