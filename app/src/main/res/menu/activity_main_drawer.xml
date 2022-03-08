@@ -8,6 +8,9 @@
             android:id="@+id/nav_home"
             android:title="@string/menu_home" />
         <item
+            android:id="@+id/convierteBimer"
+            android:title="Conviertete en Bimer" />
+        <item
             android:id="@+id/reporteSentinel"
             android:title="@string/reporteSentinel" />
         <item

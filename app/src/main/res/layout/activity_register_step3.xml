@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:hint="Contraseña"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:textColor="@color/black">
 
             </EditText>
@@ -130,7 +130,7 @@
                 android:autofillHints=""
                 android:hint="Contraseña"
                 android:textColor="@color/black"
-                android:inputType="textEmailAddress">
+                android:inputType="textPassword">
 
             </EditText>
 

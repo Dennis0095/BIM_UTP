@@ -8,13 +8,21 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bim.utp.pe.local.model.body.EntidadFinanciera;
 import com.bim.utp.pe.local.model.body.OperadorMovil;
+import com.bim.utp.pe.local.model.body.ResponseConsultaBim;
+import com.bim.utp.pe.local.model.body.ResponseRegistroUsuario;
 import com.bim.utp.pe.mvvm.view.enviarDinero.EnviarDineroActivity;
+import com.bim.utp.pe.mvvm.view.registro.ConsultaBim;
 import com.bim.utp.pe.mvvm.view.registro.RegisterActivity;
 import com.bim.utp.pe.mvvm.view.registro.RegisterActivity2;
+import com.bim.utp.pe.mvvm.view.registro.RegisterActivity3;
+import com.bim.utp.pe.mvvm.view.registro.RegisterActivity4;
+import com.bim.utp.pe.mvvm.view.registronegocio.RegistroNegocioActivity;
+import com.bim.utp.pe.mvvm.viewmodel.parametro.ConsultaBimViewModel;
 import com.bim.utp.pe.mvvm.viewmodel.parametro.ParametroViewModel;
 import com.google.android.material.navigation.NavigationView;
 
@@ -32,6 +40,8 @@ import com.bim.utp.pe.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -79,6 +89,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent inte = new Intent(this , EnviarDineroActivity.class);
                 startActivity(inte);
                 return true;
+            case R.id.convierteBimer:
+                Intent intent = new Intent(this , RegistroNegocioActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.perfil:
+                Intent intent2 = new Intent(this , ConsultaBim.class);
+                startActivity(intent2);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -112,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void get0peradores(){
         final ParametroViewModel viewModel = ViewModelProviders.of(this).get(ParametroViewModel.class);
         viewModel.getOperadoresMoviles();
-        viewModel.setListenerOperadoresMoviles().observe(this, baseResponse -> viewModel.verifyResponse2(baseResponse));
+        viewModel.setListenerOperadoresMoviles().observe(this, baseResponse -> viewModel.verifyResponse(baseResponse));
         viewModel.setOperadorMovil().observe(this, new Observer<ArrayList<OperadorMovil>>() {
             @Override
             public void onChanged(ArrayList<OperadorMovil> operadoresMoviles) {

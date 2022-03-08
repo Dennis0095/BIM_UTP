@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_backgroundfinal"
-    tools:context=".mvvm.view.registro.RegisterActivity4">
+    tools:context=".mvvm.view.registronegocio.RegistroNegocioActivity2">
 
     <ImageView
         android:id="@+id/logoapp"
@@ -26,7 +26,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido a BIM"
+        android:layout_marginTop="20dp"
+        android:text="Toca esperar"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -42,7 +43,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gracias por registrarte"
+        android:text="Gracias por enviar tu solicitud"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -74,11 +75,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="20dp"
-                android:text="Se ha registrado exitosamente, puede ingresar."
+                android:padding="10dp"
+                android:text="Hemos recibido sus datos exitosamente, estaremos brindandole una pronta respuesta."
                 android:textAlignment="center"
                 android:textColor="#564AA0"
-                android:textSize="17sp">
+                android:textSize="16sp">
             </TextView>
 
 
@@ -94,16 +95,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#564AA0"
-                    android:id="@+id/boton4"
+                    android:id="@+id/boton5"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/seguirdspregistro"
+                        android:id="@+id/continuarRegistroBimer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
-                        android:textSize="20dp"
                         android:text="Continuar"
                         android:textAlignment="center"
                         android:textColor="@color/white">

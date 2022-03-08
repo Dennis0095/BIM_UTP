@@ -3,28 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/circulo_active.xml" value="0.3828125" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/circulo_disabled.xml" value="0.3828125" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/rect_btn.xml" value="0.3828125" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/rect_input.xml" value="0.3828125" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/rect_leer_qr.xml" value="0.22135416666666666" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/rect_pon_plata.xml" value="0.22135416666666666" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/rect_saca_plata.xml" value="0.22135416666666666" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/rect_step.xml" value="0.3828125" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/drawable/rect_white.xml" value="0.22135416666666666" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/activity_enviar_dinero.xml" value="0.35260416666666666" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/activity_main.xml" value="0.1578125" />
+        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/app_bar_main.xml" value="0.36666666666666664" />
         <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/fragment_slideshow.xml" value="0.36666666666666664" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/layout/nav_header_main.xml" value="0.1578125" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/menu/activity_main_drawer.xml" value="0.1578125" />
-        <entry key="..\:/PROYECTOS/ANDROID/BimUtp/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/drawable/ic_backgroundfinal2.xml" value="0.316" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.3165" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/drawable/ic_baseline_arrow_back_ios_27.xml" value="0.3165" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_consulta_bim.xml" value="0.2549019607843137" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_consulta_perfil.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_enviar_dinero.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step1.xml" value="0.35648148148148145" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step3.xml" value="0.287962962962963" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_register_step4.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_registro_negocio.xml" value="0.2834890965732087" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_registro_negocio2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/activity_registronegocio1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/app_bar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/app_bar2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/app_bar3.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/app_bar_main.xml" value="0.33" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/content_main.xml" value="0.35648148148148145" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/fragment_gallery.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/fragment_slideshow.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Oscar Alonso/Desktop/BIM_UTP/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -13,9 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BimUtp">
         <activity
-            android:theme="@style/Theme.BimUtp2"
+            android:name=".mvvm.view.registro.ConsultaBim"
+            android:exported="false"
+            android:theme="@style/SinToolbar"
+            />
+        <activity
+            android:name=".mvvm.view.registronegocio.RegistroNegocioActivity2"
+            android:exported="false"
+            android:theme="@style/SinToolbar" />
+        <activity
+            android:name=".mvvm.view.registronegocio.RegistroNegocioActivity"
+            android:exported="false"
+            android:theme="@style/SinToolbar" />
+        <activity
             android:name=".mvvm.view.enviarDinero.EnviarDineroActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.BimUtp2" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
